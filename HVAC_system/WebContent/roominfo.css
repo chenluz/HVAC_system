@@ -1,0 +1,21 @@
+@CHARSET "US-ASCII";
+#roominfo
+{
+	text-align: center;
+}
+
+#roominfo td
+{
+	width:150px;
+}
+
+
+#house {
+background-image: url(temper.gif);
+background-size:100px 100px;
+background-repeat:no-repeat;
+background-position:center;
+height:100px;
+width:150px;
+font-size:30px
+}

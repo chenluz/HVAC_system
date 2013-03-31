@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name>HVAC control</display-name>
+  <description>
+       HVAC control system, monitor and setting schedule 
+  </description>
+  <servlet>
+    <servlet-name>controller</servlet-name>
+    <servlet-class>
+        	userHVAC.controller.Controller
+        </servlet-class>
+    <init-param>
+      <param-name>jdbcDriverName</param-name>
+      <param-value>  com.mysql.jdbc.Driver  </param-value>
+    </init-param>
+    <init-param>
+      <param-name>jdbcURL</param-name>
+      <param-value>  jdbc:mysql:///HVACsystem     </param-value>
+    </init-param>
+  </servlet>
+  
+  <servlet>
+        <servlet-name>   image           </servlet-name>
+        <servlet-class>  userHVAC.view.ImageServlet        </servlet-class>
+   </servlet>
+    
+  <servlet-mapping>
+    <servlet-name>controller</servlet-name>
+    <url-pattern>   *.do                     </url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+    <servlet-name>controller</servlet-name>
+    <url-pattern>   /roomlist.do                    </url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+        <servlet-name>   image            </servlet-name>
+        <url-pattern>    /image                   </url-pattern>
+    </servlet-mapping>
+    
+  <welcome-file-list>
+    <welcome-file>   roomlist.do   </welcome-file>
+  </welcome-file-list>
+</web-app>

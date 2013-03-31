@@ -1,0 +1,48 @@
+@CHARSET "US-ASCII";
+#schedule
+{
+	cellspacing:0;
+	border-spacing:0;
+	border: 1px white solid ;
+	text-align: center;
+}
+#schedule tr
+{
+	height: 50px;		
+}
+#schedule tr td
+{
+	border-bottom:1pt solid white;
+	
+}
+#schedule tr td.temperature
+{
+	color:white;
+}
+
+#schedule colgroup col
+{
+	width:2400px;
+}
+#schedule colgroup col.head
+{
+	background-color:#FFFFFF;
+}
+#colorsample
+{
+	cellspacing:0;
+	border-spacing:0;
+	text-align: center;
+	bolder: 1px solid #BDBDBD;
+	height:25px;
+	margin-top:0%;
+}
+#textsample 
+{
+	cellspacing:0;
+	border-spacing:0;
+	text-align: center;
+	bolder: 1px solid #BDBDBD;
+	height:25px;
+	color:black;
+}
